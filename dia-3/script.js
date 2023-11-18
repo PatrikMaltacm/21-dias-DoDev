@@ -1,6 +1,8 @@
-let num1 = 1;
-let num2 = 2;
+let entradaDoUsuario = prompt("Qual sua idade?");
+console.log(entradaDoUsuario);
+let entradaDoUsuarioEmNumber = Number(entradaDoUsuario);
+console.log(entradaDoUsuarioEmNumber);
 
-let soma = num1 + num2;
 
-console.log(soma);
+//parseInt converte para int
+//Number converte para numero
