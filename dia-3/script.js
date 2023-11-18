@@ -1,9 +1,6 @@
-let meuNome = "Patrik Malta"
-console.log(meuNome)
-meuNome = "Patrik Carvalho"
-console.log(meuNome)
+let num1 = 1;
+let num2 = 2;
 
-console.log("============= const =============")
+let soma = num1 + num2;
 
-const num = 2
-console.log(num)
+console.log(soma);
