@@ -1,13 +1,11 @@
-let idade = Number(prompt("Insira sua idade: "));
-let nome = prompt("Qual seu nome?");
+let fome = prompt('Você está com fome?');
+let dinheiro = prompt('Você tem dinheiro?');
+let restaurante = prompt("O restaurante está aberto?");
 
-// == igual | != diferente | < menor que | > maior que | <= >= menor ou maior igual 
-// === igual valor e tipo | !== diferente valor e tipo 
-
-if(idade == 18 && nome == "Patrik"){
-    console.log("Seu nome é Patrik e você tem 18 anos.");
-}else if(idade === 18 || nome === "Patrik"){
-    console.log("Seu nome é Patrik ou você tem 18 anos.");
-}else{
-    console.log("Seu nome não é Patrik e você não tem 18 anos.");
+if(fome == 'não' || fome == 'Não' || dinheiro == 'não' || dinheiro == 'Não'){
+    console.log('Hoje a janta será em casa.');
+}else if(fome == 'sim' || fome == 'Sim' && dinheiro == 'sim' || dinheiro == 'sim' && restaurante == 'não' || restaurante == 'Não'){
+    console.log('Peça um deliverY!');
+}else if(fome == 'sim' || fome == 'Sim' && dinheiro == 'sim' || dinheiro == 'sim' && restaurante == 'Não' || restaurante == 'Sim'){
+    console.log('Hoje a janta vai ser no seu restaurante favorito!');
 }
