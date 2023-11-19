@@ -1,11 +1,12 @@
-let fome = prompt('Você está com fome?');
-let dinheiro = prompt('Você tem dinheiro?');
-let restaurante = prompt("O restaurante está aberto?");
+let nome = prompt('Qual seu nome?');
+let idade = Number(prompt('Qual sua idade?'));
+let temCarta = prompt("Você tem carteira de motorista?");
+let temCarro = prompt("Você tem carro?");
 
-if(fome == 'não' || fome == 'Não' || dinheiro == 'não' || dinheiro == 'Não'){
-    console.log('Hoje a janta será em casa.');
-}else if(fome == 'sim' || fome == 'Sim' && dinheiro == 'sim' || dinheiro == 'sim' && restaurante == 'não' || restaurante == 'Não'){
-    console.log('Peça um deliverY!');
-}else if(fome == 'sim' || fome == 'Sim' && dinheiro == 'sim' || dinheiro == 'sim' && restaurante == 'Não' || restaurante == 'Sim'){
-    console.log('Hoje a janta vai ser no seu restaurante favorito!');
+if(idade < 18 || temCarta == 'não' || temCarta == 'Não'){
+    console.log(nome + ", Você não pode dirigir!");
+}else if(idade >= 18 && temCarta == 'sim' || temCarta == "Sim" && temCarro == "não" || temCarro == 'Não'){
+    console.log(nome + ", Você pode dirigir mas não tem carro.");
+}else if(idade >= 18 && temCarta == 'sim' || temCarta == "Sim" && temCarro == "sim" || temCarro == 'Sim'){
+    console.log(nome + ", Você será o motorista!");
 }
