@@ -1,4 +1,10 @@
+let numero  =  Number ( prompt ( "Qual o número que você quer a tabuada?" ));
 
-for(let contador = 50; contador >= 0; contador -= 5){
-    console.log(contador);
+for (let i = numero; i <= numero + 2; i++){
+    console.log("-----------------------------------")
+    console.log("Tabuada do: " + i);
+    console.log("-----------------------------------");
+    for(let j = 0; j <= 10; j++){
+        console.log(i + " x " + j + " = " + (i*j));
+    }
 }
