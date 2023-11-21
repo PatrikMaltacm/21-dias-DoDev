@@ -1,5 +1,5 @@
-let tabuada = Number(prompt("De qual numero você quer a tabuada?"));
+let num1 = Number(prompt("Insira um numero inteiro e positivo"));
 
-for(let contador = 0; contador <= 10; contador++){
-    console.log(tabuada + " x " + contador + " = " + (tabuada*contador));
+for(let contador = 0; contador <= num1; contador++){
+    console.log(contador);
 }
