@@ -1,7 +1,7 @@
 let idade = 17
 
 do {
-    let idade = Number(prompt("Insira sua idade: "))
+    idade = Number(prompt("Insira sua idade: "))
     console.log(idade)
 } while (idade >= 18);
 
