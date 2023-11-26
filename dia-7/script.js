@@ -1,53 +1,45 @@
-let nota = 0
-let sexo = ""
-let contador = -1;
-let media = 0
-let homens = 0
-let numeroAlunos = 1
-let maiorHomens = 0 
-let mulheresMaio7 = 0
-let outra = "true"
+let nome = ""
+let cpf = 0
+let valor = 0
+let valorTotal = 0
+let opc = 0
+let opcSorD = ""
+let saldo = 1000
+let numOperacoes = 0
+let mediaValor = 0 
 
-while(contador <= numeroAlunos){
-    numeroAlunos ++;
-    if(contador < 0){
-        contador = 1
-    }
-    nota = Number(prompt("Qual a nota do " + contador + " aluno(a) (0-10): "))
-    sexo = String(prompt("Qual o sexo do " + contador + " aluno(a) (f/m): "))
+do {
+    nome = String(prompt("Insira seu nome: "))
+    cpf = Number(prompt("Insira seu CPF: "))
+    valor = Number(prompt("Insira o valor que deseja sacar ou depositar: "))
+    opcSorD = String(prompt("Deseja sacar ou depositar? (s ou d)"))
 
-
-
-    if(sexo === "m"){
-        if(nota > maiorHomens){
-            maiorHomens = nota
+    if(valor <= saldo && valor > 0){
+        if(opcSorD == "s"){
+            saldo -= valor
         }
-        homens += 1;
+    }else if(opcSorD == "s"){
+        alert("O valor inserido para saque é maior que o saldo do usuario, não sera possivel sacar!")
     }
-    if(sexo === "f" && nota > 7){
-        mulheresMaio7 += 1;
+    if(valor > 0){
+        if(opcSorD == "d"){
+            saldo += valor
+        }
     }
+    valorTotal += valor
+    
+    opc = Number(prompt("Deseja continuar? (1) para continuar (2) para parar"))
 
-    media += nota
+    numOperacoes++
+    mediaValor += valor
 
+    console.log(opc)
+    console.log(numOperacoes)
+    
+} while (opc === 1);
 
+mediaValor = mediaValor / numOperacoes
 
-    outra = String(prompt("Deseja adicionar mais uma nota? (s/n)"))
-
-    if(outra === "n"){
-        contador = 100000000000
-    }
-
-    contador++
-}
-
-numeroAlunos -= 1
-media = media / numeroAlunos
-
-
-console.log("A media geral dos alunos é: " + (media))
-console.log("O numero de alunos homens foram: " + homens)
-console.log("O numero de alunas mulheres que tiraram acima de 7 foram: " + mulheresMaio7)
-console.log("A maior nota entre os homens foi: " + maiorHomens)
-console.log(outra)
-console.log(numeroAlunos)
+console.log("Seu saldo é de: " + saldo)
+console.log("O valor inserido foi de: " + valorTotal)
+console.log("A media de valores inseridos foram de: " + mediaValor)
