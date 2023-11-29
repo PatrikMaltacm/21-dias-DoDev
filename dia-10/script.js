@@ -1,16 +1,19 @@
-let nomes = []
-let continuar = true
-let arrayPosition = 0
+const array = []
+const indices = []
+let contadorIndice = 0
 
-while(continuar){
-    let InputName = prompt("Insira um nome no array: ")
-    nomes[arrayPosition] = InputName
+const searchNumber = parseInt(prompt("Insira o numero que será procurado: "))
 
-    let toContinue = prompt("Se deseja adicionar mais um nome digite (1) ")
-    if(toContinue != "1"){
-        continuar = false
-    }
-    arrayPosition++
-
-    console.log(nomes)
+for (let i = 0; i < 10; i++){
+    const elemento = parseInt(prompt(`Digite o elemento + ${i + 1}: `))
+    array[i] = elemento
 }
+
+for (let i = 0; i < 10; i++){
+    if(array[i] === searchNumber){
+        indices[contadorIndice] = i
+        contadorIndice++
+    }
+}
+
+console.log(`O numero procurado ${searchNumber}, foi encontrado no indice ${indices}.`)
